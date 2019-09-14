@@ -1,6 +1,5 @@
-osx_image: xcode8.3
 sudo: required
-dist: trusty
+dist: xenial
 language: c
 matrix:
   include:
