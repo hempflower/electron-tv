@@ -22,7 +22,8 @@ before_install:
   "$TRAVIS_OS_NAME" == "linux" ] && echo "linux" || echo "darwin")-amd64-1.2.1.tar.gz
   | tar -xz -C /tmp/git-lfs --strip-components 1 && /tmp/git-lfs/git-lfs pull
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils; fi
-- sudo snap install snapcraft --classic
+- sudo apt-get install snapd
+- sudo apt-get install snapcraft
 install:
 - nvm install 8
 - curl -o- -L https://yarnpkg.com/install.sh | bash
